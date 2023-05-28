@@ -1,0 +1,70 @@
+/*CSS*/
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+/*Navigation*/
+.navbar-brand img {
+	width:150px;
+}
+
+@media (max-width: 768px) {
+	.navbar-brand img {
+		width: 100px;
+	}	
+}
+@media (max-width: 576px) {
+	.navbar-brand img {
+		width: 50px;
+	}
+}
+
+/*Background of Home*/
+.container {
+  margin-top: 20px;
+  background-color: #491000
+}
+
+.col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-lg-6 img {
+  max-width: 100%;
+	padding: inherit;
+}
+
+.col-lg-6 h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Bitter', sans-serif;
+	weight: bold;
+  color: white;
+}
+
+.col-lg-6 p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.col-lg-6 .btn {
+  margin-top: 20px;
+  align-self: center;
+}
+
+/*Footer*/
+.footer .container {
+	font-family: 'bitter' sans-serif;
+	background-color: #191312;
+}
+
+

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*Contact Form*/
+.form-group {
+  margin-bottom: 20px;
+	font-family: 'Hind', sans-serif;
+	color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
