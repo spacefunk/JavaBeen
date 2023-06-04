@@ -1,22 +1,24 @@
 // JavaScript Document
 
+//Navigation
+ $(document).ready(function() {
+    $(".navbar-toggler").click(function() {
+      $(".navbar-nav").toggleClass("show");
+    });
+  });
+
 //shopping cart
 $(document).ready(function() {
-  // Cart array to store selected items
   var cartItems = [];
 
-  // Add to Cart button click event
   $('.add-to-cart').on('click', function() {
     var itemName = $(this).data('item');
 
-    // Add item to cart array
     cartItems.push(itemName);
 
-    // Update cart display
     updateCart();
   });
 
-  // Update the cart display
   function updateCart() {
     var cartList = $('#cart-items');
     cartList.empty();
@@ -63,24 +65,50 @@ $(document).ready(function() {
   }
 });
 
+
 //Contact Form
 $(document).ready(function() {
   $('#contact-form').submit(function(e) {
     e.preventDefault();
 
-    // Perform form validation here before submitting
+    // Get form field values
+    var firstName = $('#first-name').val();
+    var lastName = $('#last-name').val();
+    var phoneNumber = $('#phone-number').val();
+    var email = $('#email').val();
+    var message = $('#message').val();
+
+    
+    if (firstName.trim() === '') {
+      return; 
+    }
+
+    if (lastName.trim() === '') {
+      return; 
+    }
+
+    if (phoneNumber.trim() === '') {
+      return; 
+    }
+
+    if (email.trim() === '') {
+      return; 
+    }
+
+    if (message.trim() === '') {
+      return; 
+    }
 
     // If form is valid, submit it via AJAX
     $.ajax({
-      url: $(this).attr('action'),
+      url: 'https://formsubmit.co/amberesthetician.com', 
       type: 'POST',
       data: $(this).serialize(),
       success: function(response) {
-        // Handle successful form submission
+  
         console.log(response);
       },
       error: function(xhr, status, error) {
-        // Handle error during form submission
         console.error(error);
       }
     });
