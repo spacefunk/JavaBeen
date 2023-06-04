@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: white;
+  background: #191312;
   margin: 0;
   padding: 0;
 }
@@ -13,6 +13,52 @@
 /*Navigation*/
 .navbar-brand img {
 	width:150px;
+}
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+
+.navbar-nav.ml-auto {
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right; /* Adjust float property to position on the far right */
+}
+
+.social-media-icons li {
+  display: inline-block;
+  margin-left: 10px; /* Adjust spacing between icons */
+}
+
+.social-icon img {
+  width: 20px; /* Adjust the size of the icons as needed */
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav.social-icons {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -29,7 +75,7 @@
 /*Background of Home*/
 .container {
   margin-top: 20px;
-  background-color: #491000
+  background-color: #883E24;
 }
 
 .col-lg-6 {
@@ -40,29 +86,54 @@
 
 .col-lg-6 img {
   max-width: 100%;
-	padding: inherit;
+  padding: 0px;
 }
 
-.col-lg-6 h1 {
+.col-lg-6 h2 {
+	margin-top: -40px;
   text-align: center;
-  margin-top: 20px;
-  font-family: 'Bitter', sans-serif;
-	weight: bold;
+  font-family: 'Hind', sans-serif;
   color: white;
 }
 
 .col-lg-6 p {
   text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'Hind', sans-serif;
+  weight: bold;
+  font-size: 17px;
+  color: white;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-image {
+  margin-top: 20px;
+  max-width: 600px; /* Adjust the width as desired */
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
   margin-top: 10px;
 }
 
-.col-lg-6 .btn {
-  margin-top: 20px;
-  align-self: center;
+.custom-button button {
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-
 /*Footer*/
-.footer .container {
+.footer .footer-container {
 	font-family: 'bitter' sans-serif;
 	background-color: #191312;
 }
