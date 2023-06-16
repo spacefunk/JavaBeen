@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-
 .menu-heading {
   font-size: 40px;
   color: #333;
@@ -19,56 +17,28 @@ svg {
   position: absolute;
 }
 .wrapper {
-  width: 100%;
+  max-width: 100%;
   height: 50vh;
   overflow: hidden;
   background-color: #883E24;
 }
-#text-container {
-  height: 100px;
-  width: 100px;
-  margin: 200px auto;
-  position: relative;
-  filter: url(#goo);
-}
-#text-container .menu-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: Anton;
-  font-size: 200px;
-  z-index: 999;
-  color: white;
-}
-#text-container .drop {
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-   transform: translate(300%, -800%) scaleX(0.5);
-  animation: move 6s cubic-bezier(1, 0.04, 0.74, 0.2) infinite;
+.image-container {
+  width: 100%;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
 }
 
-@keyframes move {
-  0% {
-    transform: translate(500%, -800%) scaleX(0.2);
-    height: 50px;
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+  .image-container {
+    max-width: 50%;
   }
-  30% {
-    transform: translate(500%, -200%);
-    height: 40px;
-  }
-  70% {
-    transform: translate(500%, 100%);
-    height: 40px;
-  }
-  100% {
-    transform: translate(500%, 400%) scaleX(0.2);
-    height: 40px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    height: 35vh;
   }
 }
 
