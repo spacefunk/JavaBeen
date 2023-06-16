@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-/*Drip Shop Typography*/
 /*Drip Menu Typography*/
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-
 * {
   padding: 0;
   margin: 0;
@@ -12,62 +9,35 @@
 svg {
   position: absolute;
 }
-
-.card-body{
-	font-family: 'Hind', sans-serif;
-}
-
 .wrapper {
-  width: 100%;
+  max-width: 100%;
   height: 50vh;
   overflow: hidden;
   background-color: #883E24;
 }
-#text-container {
-  height: 100px;
-  width: 100px;
-  margin: 200px auto;
-  position: relative;
-  filter: url(#goo);
+.image-container {
+  width: 100%;
+  text-align: center;
 }
-#text-container .shop-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: Anton;
-  font-size: 200px;
-  z-index: 999;
-  color: white;
+.custom-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
-#text-container .drop {
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(120%, -800%) scaleX(0.5);
-  animation: move 6s cubic-bezier(1, 0.04, 0.74, 0.2) infinite;
+
+/* Desktop Type*/
+@media (min-width: 768px) {
+  .custom-image {
+    max-width: 50%;
+  }
 }
-@keyframes move {
-  0% {
-    transform: translate(120%, -800%) scaleX(0.2);
-    height: 60px;
+
+/* Moble Container */
+@media (max-width: 767px) {
+  .wrapper {
+    height: 35vh;
   }
-  30% {
-    transform: translate(120%, -200%);
-    height: 30px;
-  }
-  70% {
-    transform: translate(120%, 100%);
-    height: 30px;
-  }
-  100% {
-    transform: translate(120%, 800%) scaleX(0.2);
-    height: 30px;
-	}
 }
 	
 /*Shopping Items and Cart*/
