@@ -1,141 +1,44 @@
-/*CSS*/
+/*Main CSS*/
 
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #191312;
+body {
+  background: white;
   margin: 0;
-  padding: 0;
+  padding-bottom: 10px;
 }
 
-/*Navigation*/
+/* Navigation */
 .navbar-brand img {
-	width:150px;
-}
-.container-fluid {
-  padding: 0;
+  width: 100px;
 }
 
-.navbar {
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
   justify-content: space-between;
 }
 
-.navbar-brand {
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
   margin-right: auto;
+  margin-left: auto;
 }
 
+.collapse:not(.show) {
+  display: none;
+}
 
-.navbar-nav.ml-auto {
-  display: flex;
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
   align-items: center;
 }
 
-.social-media-icons {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: right; /* Adjust float property to position on the far right */
-}
-
-.social-media-icons li {
-  display: inline-block;
-  margin-left: 10px; /* Adjust spacing between icons */
-}
-
-.social-icon img {
-  width: 20px; /* Adjust the size of the icons as needed */
-  height: 20px;
-}
-
-@media (max-width: 767px) {
-  .navbar-nav.social-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar-toggler {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-	.navbar-brand img {
-		width: 100px;
-	}	
-}
-@media (max-width: 576px) {
-	.navbar-brand img {
-		width: 50px;
-	}
-}
-
-/*Background of Home*/
-.container {
-  margin-top: 20px;
-  background-color: #883E24;
-}
-
-.col-lg-6 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.col-lg-6 img {
-  max-width: 100%;
-  padding: 0px;
-}
-
-.col-lg-6 h2 {
-	margin-top: -40px;
-  text-align: center;
+/* Footer */
+.footer-container {
   font-family: 'Hind', sans-serif;
-  color: white;
+  font-weight: bold;
 }
-
-.col-lg-6 p {
-  text-align: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-family: 'Hind', sans-serif;
-  weight: bold;
-  font-size: 17px;
-  color: white;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.custom-image {
-  margin-top: 20px;
-  max-width: 600px; /* Adjust the width as desired */
-}
-
-.custom-button {
-  display: inline-block;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin-top: 10px;
-}
-
-.custom-button button {
-  color: black;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-/*Footer*/
-.footer .footer-container {
-	font-family: 'bitter' sans-serif;
-	background-color: #191312;
-}
-
 
