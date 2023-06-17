@@ -1,13 +1,14 @@
 // JavaScript Document
 
 //Navigation
- $(document).ready(function() {
-    $(".navbar-toggler").click(function() {
-      $(".navbar-nav").toggleClass("show");
-    });
+$(document).ready(function() {
+  $('.navbar-toggler').click(function() {
+    $('.navbar-collapse').toggleClass('show');
   });
+});
 
-//shopping cart
+
+//Shopping cart
 $(document).ready(function() {
   var cartItems = [];
 
@@ -33,7 +34,7 @@ $(document).ready(function() {
   }
 });
 
-//checkout
+//Checkout
 $(document).ready(function() {
   var cartItems = [];
 
@@ -65,52 +66,48 @@ $(document).ready(function() {
   }
 });
 
-
 //Contact Form
 $(document).ready(function() {
   $('#contact-form').submit(function(e) {
     e.preventDefault();
 
-    // Get form field values
-    var firstName = $('#first-name').val();
-    var lastName = $('#last-name').val();
-    var phoneNumber = $('#phone-number').val();
-    var email = $('#email').val();
-    var message = $('#message').val();
+    $('.error').text('');
 
-    
-    if (firstName.trim() === '') {
-      return; 
+    // Validate form fields
+    var name = $('#name').val().trim();
+    var email = $('#email').val().trim();
+    var message = $('#message').val().trim();
+    var valid = true;
+
+    if (name === '') {
+      $('#name-error').text('Please enter your name');
+      valid = false;
     }
 
-    if (lastName.trim() === '') {
-      return; 
+    if (email === '') {
+      $('#email-error').text('Please enter your email');
+      valid = false;
+    } else if (!isValidEmail(email)) {
+      $('#email-error').text('Please enter a valid email address');
+      valid = false;
     }
 
-    if (phoneNumber.trim() === '') {
-      return; 
+    if (message === '') {
+      $('#message-error').text('Please enter a message');
+      valid = false;
     }
 
-    if (email.trim() === '') {
-      return; 
+    if (valid) {
+      $('#success-message').text('Your message has been sent!');
+      $('#success-message').show();
+      $('#contact-form').hide();
+      $('#map-container').removeClass('col');
+      $('#map-container').addClass('col-md-6 col-xl-4');
     }
-
-    if (message.trim() === '') {
-      return; 
-    }
-
-    // If form is valid, submit it via AJAX
-    $.ajax({
-      url: 'https://formsubmit.co/amberesthetician.com', 
-      type: 'POST',
-      data: $(this).serialize(),
-      success: function(response) {
-  
-        console.log(response);
-      },
-      error: function(xhr, status, error) {
-        console.error(error);
-      }
-    });
   });
+
+  function isValidEmail(email) {
+    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+  }
 });
