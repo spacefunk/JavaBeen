@@ -7,6 +7,10 @@ body {
 }
 
 /* Navigation */
+.navbar-nav .nav-item.active .nav-link {
+  color: #7E0000 !important;
+}
+
 .navbar-brand img {
   width: 100px;
 }
@@ -41,4 +45,3 @@ body {
   font-family: 'Hind', sans-serif;
   font-weight: bold;
 }
-
